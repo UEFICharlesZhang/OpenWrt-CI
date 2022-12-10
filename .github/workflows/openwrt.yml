@@ -37,7 +37,7 @@ jobs:
       - name: Download openwrt
         run: |
           git clone https://github.com/openwrt/openwrt.git
-          mv ./openwrt ./
+          mv ./openwrt/* ./
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
