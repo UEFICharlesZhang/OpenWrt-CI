@@ -51,19 +51,19 @@ jobs:
           make defconfig
       - name: Custom openwrt configure file
         run: |
-          echo CONFIG_TARGET_armvirt=y >> .config
-          echo CONFIG_TARGET_armvirt_64=y >> .config
-          echo CONFIG_TARGET_armvirt_64_Default=y >> .config
-          echo CONFIG_TARGET_BOARD="armvirt" >> .config
-          echo CONFIG_TARGET_PROFILE=y >> .config
-          echo CONFIG_TARGET_ARCH_PACKAGES="aarch64_cortex-a53" >> .config
-          echo CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mcpu=cortex-a53" >> .config
-          echo CONFIG_CPU_TYPE="cortex-a53" >> .config
-          echo CONFIG_LINUX_5_15=y >> .config
-          echo CONFIG_TARGET_ROOTFS_INITRAMFS=y >> .config
+          # echo CONFIG_TARGET_armvirt=y >> .config
+          # echo CONFIG_TARGET_armvirt_64=y >> .config
+          # echo CONFIG_TARGET_armvirt_64_Default=y >> .config
+          # echo CONFIG_TARGET_BOARD="armvirt" >> .config
+          # echo CONFIG_TARGET_PROFILE=y >> .config
+          # echo CONFIG_TARGET_ARCH_PACKAGES="aarch64_cortex-a53" >> .config
+          # echo CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mcpu=cortex-a53" >> .config
+          # echo CONFIG_CPU_TYPE="cortex-a53" >> .config
+          # echo CONFIG_LINUX_5_15=y >> .config
+          # echo CONFIG_TARGET_ROOTFS_INITRAMFS=y >> .config
           
-          echo CONFIG_TARGET_ROOTFS_EXT4FS=y >> .config
-          echo CONFIG_TARGET_ROOTFS_INITRAMFS=y >> .config
+          # echo CONFIG_TARGET_ROOTFS_EXT4FS=y >> .config
+          # echo CONFIG_TARGET_ROOTFS_INITRAMFS=y >> .config
           
       - name: Custom linux configure file
         run: |
