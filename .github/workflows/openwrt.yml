@@ -68,11 +68,11 @@ jobs:
           
       - name: Custom linux configure file
         run: |
-         echo CONFIG_EFI=y >> ./target/linux/armvirt/64/config-5.15
-         echo CONFIG_EFI_STUB=y >> ./target/linux/armvirt/64/config-5.15
-         echo CONFIG_EFI_EALYCON=y >> ./target/linux/armvirt/64/config-5.15
-         echo CONFIG_ACPI=y >> ./target/linux/armvirt/64/config-5.15
-         echo "# CONFIG_ARM64_ACPI_PARKING_PROTOCOL is not set" >> ./target/linux/armvirt/64/config-5.15
+        # echo CONFIG_EFI=y >> ./target/linux/armvirt/64/config-5.15
+        # echo CONFIG_EFI_STUB=y >> ./target/linux/armvirt/64/config-5.15
+        # echo CONFIG_EFI_EALYCON=y >> ./target/linux/armvirt/64/config-5.15
+        # echo CONFIG_ACPI=y >> ./target/linux/armvirt/64/config-5.15
+        # echo "# CONFIG_ARM64_ACPI_PARKING_PROTOCOL is not set" >> ./target/linux/armvirt/64/config-5.15
           
       - name: Download package source code
         run: |
