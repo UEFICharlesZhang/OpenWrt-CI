@@ -49,7 +49,7 @@ jobs:
           ./scripts/feeds install -a
       - name: Gen openwrt configure file
         run: |
-          #make defconfig
+          make defconfig
       - name: Custom openwrt configure file
         run: |
           cp -f ./armvirt_config/.config ./
