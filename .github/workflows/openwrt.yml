@@ -39,6 +39,7 @@ jobs:
         run: |
           git clone https://github.com/openwrt/openwrt.git
           mv ./openwrt/* ./
+          git checkout openwrt-22.03
       - name: Update luci feeds
         run: |
           ./scripts/feeds update luci
@@ -52,8 +53,8 @@ jobs:
           make defconfig
       - name: Custom openwrt configure file
         run: |
-          cp -f ./armvirt_config/.config ./
-          cp -f ./armvirt_config/target/linux/armvirt/config-5.10 ./target/linux/armvirt/config-5.10
+          #cp -f ./armvirt_config/.config ./
+          #cp -f ./armvirt_config/target/linux/armvirt/config-5.10 ./target/linux/armvirt/config-5.10
           
       - name: Custom linux configure file
         run: |
