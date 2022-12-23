@@ -44,14 +44,17 @@ jobs:
           git checkout v22.03.0
       - name: Update luci feeds
         run: |
+          cd openwrt
           ./scripts/feeds update luci
           ./scripts/feeds install -a -p luci
       - name: Update feeds
         run: |
+          cd openwrt
           ./scripts/feeds update -a
           ./scripts/feeds install -a
       - name: Gen openwrt configure file
         run: |
+          cd openwrt
           make defconfig
       - name: Custom openwrt configure file
         run: |
@@ -68,16 +71,18 @@ jobs:
           
       - name: Download package source code
         run: |
+          cd openwrt
           make download -j8
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
       - name: Compile firmware
         run: |
+          cd openwrt
           echo -e "$(nproc) thread build."
           make -j$(nproc) V=s
       - name : Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: OpenWrt_firmware
-          path: bin/targets/
+          path: openwrt/bin/targets/
           
