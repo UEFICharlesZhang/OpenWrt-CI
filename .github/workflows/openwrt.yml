@@ -39,9 +39,12 @@ jobs:
         run: |
           git clone https://github.com/openwrt/openwrt.git
           mv ./openwrt/* ./
+      - name: mv openwrt
+        run: |
+          mv ./openwrt/* ./
       - name: checkout openwrt
         run: |
-          git checkout v22.03.0
+          git checkout v22.03.2
       - name: Update luci feeds
         run: |
           ./scripts/feeds update luci
