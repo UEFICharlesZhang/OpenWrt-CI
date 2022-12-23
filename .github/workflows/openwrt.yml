@@ -58,8 +58,8 @@ jobs:
           make defconfig
       - name: Custom openwrt configure file
         run: |
-          cp -f ./armvirt_config/.config ./
-          cp -f ./armvirt_config/target/linux/armvirt/config-5.10 ./target/linux/armvirt/config-5.10
+          cp -f ./armvirt_config/.config ./openwrt
+          cp -f ./armvirt_config/target/linux/armvirt/config-5.10 ./openwrt/target/linux/armvirt/config-5.10
           
       - name: Custom linux configure file
         run: |
